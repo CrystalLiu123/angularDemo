@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <title>ng 树结构</title>
+    <link rel="stylesheet" href="./css/tree.css">
+</head>
+
+<body ng-app="MyApp" ng-controller="myCtrl">
+    <div class="tree-style">
+        <!-- 
+            class="":样式表，官方提供了三种：tree-classic  tree-dark tree-light
+            tree-model：树数据的对象，格式: [Node|Array[Node]]，对象范围在'$scope'的范围内
+            options：树的配置
+            selected-node="node":选择node触发事件，例‘on-selection="showSelected(node)"
+            on-node-toggle="function(){}":点击父目录 调用的函数
+            selected-node：[Node]，当multiSelection=false，绑定tree中单选node。
+            selected-nodes：[Array[Node]]，当multiSelection=true，绑定tree中多选nodes。
+        -->
+        <treecontrol class="tree-control" tree-model="data.dataForTheTree" 
+        options="treeOptions" on-selection="showSelected(node)">
+            {{node.name}}
+        </treecontrol>
+    </div>
+    <ui-view></ui-view>
+    <!-- <script type=" text/javascript " src="./js/jquery.min.js "></script> -->
+    <script type="text/javascript " src="./js/angular.js "></script>
+    <script type="text/javascript " src="./js/angular-tree-control.js "></script>
+    <script type="text/javascript " src="./js/context-menu.js "></script>
+    <script src="./js/app.js "></script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+[{
+        "name": "Class 3",
+        "list": [
+            { "name": "Group 2" },
+            {
+                "name": "Group 1",
+                "list": [
+                    { "name": "liming" }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Class 2",
+        "list": [{
+            "name": "Group 3",
+            "list": [{
+                "name": "wangsi"
+            }]
+        }]
+    }, {
+        "name": "Class 1",
+        "list": [{
+            "name": "Group 4",
+            "list": [{
+                "name": "zhangsan"
+            }]
+        }]
+    }, {
+        "name": "Class 4",
+        "list": [{
+            "name": "Group 10",
+            "list": [{
+                "name": "zhangsan2"
+            }]
+        }]
+    }, {
+        "name": "Class 5",
+        "list": [{
+            "name": "Group 9",
+            "list": [{
+                "name": "zhangsan3"
+            }]
+        }]
+    }, {
+        "name": "Class 6",
+        "list": [{
+            "name": "Group 7",
+            "list": [{
+                "name": "zhangsan4"
+            }]
+        }]
+    }, {
+        "name": "Class 7",
+        "list": [{
+            "name": "Group 6",
+            "list": [{
+                "name": "zhangsan5"
+            }]
+        }]
+    }
+]

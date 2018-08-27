@@ -1,0 +1,117 @@
+.tree-style {
+    width: 200px;
+    height: auto;
+    border-right: 1px solid silver;
+    float: left;
+}
+
+.tree-control {
+    background-color: #e4e4e4;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.tree-control>ul {
+    display: block;
+    padding: 0px;
+}
+
+.tree-control>ul li {
+    list-style: none;
+    padding: 0px;
+    line-height: 30px;
+}
+
+.tree-control>ul>li>div {
+    border-bottom: 1px solid #555555;
+    padding-left: 20px;
+}
+
+.tree-control>ul>li treeitem ul {
+    padding: 0px;
+}
+
+.tree-control>ul>li treeitem ul li>div {
+    padding-left: 40px;
+    border-bottom: 1px solid #555555;
+}
+
+
+/* 收缩在ul>li上有class="tree-collapsed" 展开则是tree-expanded*/
+
+.tree-control ul>.tree-collapsed>.tree-branch-head {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    padding-top: 13px;
+    padding-left: 2px;
+    background: url("../images/folder-closed.png") center no-repeat;
+}
+
+.tree-control ul>.tree-expanded>.tree-branch-head {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    padding-top: 13px;
+    padding-left: 2px;
+    background: url("../images/folder.png") center no-repeat;
+}
+
+.tree-control ul>li>treeitem ul>.tree-collapsed>.tree-branch-head {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    padding-top: 13px;
+    padding-left: 42px;
+    background: url("../images/folder-closed.png") center no-repeat;
+}
+
+.tree-control ul>li>treeitem ul>.tree-expanded>.tree-branch-head {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    padding-top: 13px;
+    padding-left: 42px;
+    background: url("../images/folder.png") center no-repeat;
+}
+
+
+/*区分叶子节点和非叶子节点 是否有class="tree-leaf"*/
+
+.tree-control ul>li>treeitem .tree-leaf>.tree-branch-head {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    padding-left: 42px;
+    padding-top: 13px;
+    background: url("../images/file.png") center no-repeat;
+}
+
+.tree-control ul>li>treeitem ul>li>treeitem .tree-leaf>.tree-branch-head {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    padding-left: 85px;
+    padding-top: 13px;
+    background: url("../images/file.png") center no-repeat;
+}
+
+.tree-control>ul>li treeitem ul treeitem div {
+    padding-left: 60px;
+}
+
+.tree-control span:hover,
+i:hover {
+    cursor: pointer;
+}
+
+.tree-control .tree-selected{
+   color: red;
+}
