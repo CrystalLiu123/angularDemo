@@ -31,7 +31,7 @@ app.controller("myCtrl", ["$scope", "$http", function($scope, $http) {
         //     }
         // })
 
-        $http.post("data/data.json").success(function(data) {
+        $http.get("data/data.json").success(function(data) {
             $scope.data.dataForTheTree = data;
         });
     }
