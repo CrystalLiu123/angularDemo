@@ -1,0 +1,36 @@
+.nav{
+    width:800px;
+    height: 80px;
+    margin-left:auto;
+    margin-right:auto;
+    background-color:#eeeeee;
+    text-align: center;
+}
+
+
+.nav>ul>li{
+    display: inline-block;
+    list-style-type: none;
+    width: 200px;
+    margin: 0px 0px;
+}
+
+.view{
+    width:798px;
+    border:solid 1px goldenrod; 
+    height: 500px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.home-view{
+    width:50%;
+    height: 300px;
+    border: solid 1px goldenrod; 
+}
+
+.about-view{
+    width: 200px;
+    height: 50px;
+    border: solid 1px blue; 
+    margin: 5px;
+}

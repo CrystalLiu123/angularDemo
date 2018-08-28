@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>路由</title>
+    <link rel="stylesheet" href="./css/ui-router.css">
+</head>
+<body>
+    <div ng-app="myApp">
+    <!-- 初始页面与路由.js文件应放在对应项目文件夹的根目录下 -->
+    <!-- 将index.html放入html文件夹  或者 app.js文件放入js文件夹 都导致整个路由出错 -->
+    <div class="nav" ng-controller="ctrl1">
+        <p>嵌套路由&多视图</p>
+        <hr>
+        <ul>
+            <li><a ui-sref="home">home</a></li>
+            <li><a ui-sref="about">about</a></li>
+        </ul>   
+    </div>
+    <div ui-view class="view"></div>
+    </div>
+    <script src="./js/angular.js"></script>
+    <script src="js/angular-ui-router.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

@@ -13,24 +13,6 @@ app.controller("myCtrl", ["$scope", "$http", function($scope, $http) {
     $scope.queryData = queryData;
 
     function queryData() {
-        // var req = new XMLHttpRequest();
-        // req.open("GET", "../data/data.json", true);
-        // req.addEventListener("load", function() {
-        //     if (req.status < 404)
-        //         callback("yes");
-        // })
-        // req.send(null);
-        // $scope.data.dataForTheTree = JSON.parse(req.responseText);
-
-        // $.ajax({       //使用ajax解决同源请求(火狐、IE可以。chrome、360不能访问file://)
-        //     type: 'get',
-        //     url: '../data/data.json',
-        //     dataType: 'JSONP', //JSONP格式只能使用GET请求
-        //     success: function(data) {
-        //         $scope.data.dataForTheTree = data;
-        //     }
-        // })
-
         $http.get("data/data.json").success(function(data) {
             $scope.data.dataForTheTree = data;
         });
