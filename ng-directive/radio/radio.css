@@ -1,0 +1,33 @@
+ .btn{
+    display: block;
+    width: 100px;
+    height: 28px; 
+} 
+
+.bgc{
+    height: 25px;
+    width: 55px;
+    background-color: #b3b0b0;
+    border-radius:12px;
+    position: absolute;
+    top:8px;
+}
+.ball{
+    height: 23px;
+    width: 23px;
+    background-color:rgb(248, 254, 255);
+    border-radius:12px;
+    position: absolute;
+    top:8px;
+    left:8px;
+    z-index: 1;
+    border: 1px solid rgb(216, 217, 218);
+}
+.ball:hover{
+    cursor: pointer;
+}
+label{
+    display: inline-block;
+    position: absolute;
+    left:70px;
+}
