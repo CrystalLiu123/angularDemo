@@ -1,33 +1,45 @@
  .btn{
-    display: block;
-    width: 100px;
-    height: 28px; 
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    position: relative;
+    top:5px;
 } 
 
 .bgc{
     height: 25px;
     width: 55px;
-    background-color: #b3b0b0;
+    background-color: #bbb7b7;
     border-radius:12px;
     position: absolute;
-    top:8px;
+    border: none;
+    /* 隐藏input的光标 */
+    color: transparent;
+    cursor: pointer;
+    outline:none;
 }
 .ball{
-    height: 23px;
-    width: 23px;
+    height: 25px;
+    width: 25px;
     background-color:rgb(248, 254, 255);
     border-radius:12px;
     position: absolute;
-    top:8px;
-    left:8px;
     z-index: 1;
     border: 1px solid rgb(216, 217, 218);
-}
-.ball:hover{
     cursor: pointer;
 }
-label{
-    display: inline-block;
-    position: absolute;
-    left:70px;
+
+/*被选中状态下的背景色*/
+.ipt-checked{
+    background-color: #62daff;
 }
+
+/*被选中状态下按钮的位置*/
+.label-checked{
+    left:32px;
+}
+.span-status{
+    color: #3b99b6;
+}
+
+

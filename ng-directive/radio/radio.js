@@ -1,13 +1,17 @@
 
 "use strict";
-angular.module("myApp", [])
-.controller('myCtrl',function($scope){
-    $scope.cklabel = "是";          //初始化标签
+var app = angular.module("myApp", [])
+app.controller('myCtrl',function($scope){
+    $scope.status = true;
     $scope.click = function(){      
-        alert("在子作用域中通过属性ckcallback,执行父作用域中的方法click()");
+        if($scope.status == true)
+            $scope.status = false;
+        else{
+            $scope.status = true;
+        }
     }
-})
-.directive("trsRadio", function() {
+});
+app.directive("trsRadio", function() {
     return {
         // restrict:限定其使用方式，详细用法：
         // E(元素)：<trs-radio></trs-radio> 
@@ -38,40 +42,19 @@ angular.module("myApp", [])
             //= scope 的属性和父 scope 属性名之间建立双向绑定
             //& 在子作用域中执行父作用域中的方法
             ckcallback: "&",   //回调函数 可在父作用域另外定义
-            cklabel: "=",
+            cklabel: "@",
+            ckstatus: "=",
         },
-        //控制器，此处为匿名函数，可注入任何服务，也可是字符串，查找已注册过的控制器
-        // controller: function($scope) {      //父作用域，即调用组件的页面的作用域
-        //     $scope.cklabel = "是";          //初始化标签
-        //     $scope.click = function(){      
-        //          alert("在子作用域中通过属性ckcallback,执行父作用域中的方法click()");
-        //     }
-        // },
+        //控制器，此处为匿名函数，可注入任何服务,亦可以是注册过的控制器名称
+        controller: 'myCtrl',     
         link: function(scope, element, attrs, controller) {     //scope为子作用域，即自定义组件的作用域
-            var ball = document.getElementById("ball");
-            var bgc = document.getElementById("bgc");
-            if (typeof scope.cklabel === "undefined") {         //默认关闭
-                scope.cklabel = "否";
-                ball.style.left = "8px";
-                bgc.style.backgroundColor = "#b3b0b0";
-            }else if(scope.cklabel == "是"){   
-                ball.style.left = "39px";
-                bgc.style.backgroundColor = "#62daff";
-            }else{
-                ball.style.left = "8px";
-                bgc.style.backgroundColor = "#b3b0b0";
+            if (typeof scope.ckstatus === "undefined") {         //默认关闭
+                scope.ckstatus = true;
             }
             
             scope.change = function(){  //改变按钮状态
-                ball.style.left == "8px" ? ball.style.left = "39px" :ball.style.left = "8px";
-                if(ball.style.left == "8px"){
-                    scope.cklabel="否";
-                    bgc.style.backgroundColor = "#b3b0b0";
-                }else{
-                    scope.cklabel="是";
-                    bgc.style.backgroundColor = "#62daff";
-                }
+                scope.ckcallback(); //父作用域中<trs-Radio ckcallback="function()">实定义function
             }
         }
-    };
+    }
 });

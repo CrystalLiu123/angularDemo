@@ -1,8 +1,5 @@
-<!-- <input class="{{ckstyle}}" type="checkbox" ng-class="{'checked':ckstatus,'chk_3':true}" ng-model="ckstatus"  name="ckname">
-<label ng-click="swtichBtn()">{{cklabel}}</label>-->
-
 <div class="btn">
-    <div class="bgc" id="bgc"></div>
-    <div class="ball" id="ball" ng-click="change()"></div>
-    <label ng-click="ckcallback()">{{cklabel}}</label>
+    <input class="bgc" ng-model="ckstatus" ng-click="change()" ng-class="{'ipt-checked':ckstatus}"/>
+    <label class="ball" ng-click="change()" ng-class="{'label-checked':ckstatus}" ></label>
 </div>
+
