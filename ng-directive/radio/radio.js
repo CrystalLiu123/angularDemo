@@ -42,7 +42,6 @@ app.directive("trsRadio", function() {
             //= scope 的属性和父 scope 属性名之间建立双向绑定
             //& 在子作用域中执行父作用域中的方法
             ckcallback: "&",   //回调函数 可在父作用域另外定义
-            cklabel: "@",
             ckstatus: "=",
         },
         //控制器，此处为匿名函数，可注入任何服务,亦可以是注册过的控制器名称

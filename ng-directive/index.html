@@ -11,7 +11,7 @@
 
 <body>
     <div ng-app="myApp" ng-controller="myCtrl">
-        <trs-radio ckcallback="click()" cklabel="cklabel" ckstatus="status"></trs-radio> 
+        <trs-radio ckcallback="click()" ckstatus="status"></trs-radio> 
         <span ng-class="{'span-status': status}" ng-bind="status ? '是' : '否'"></span>
     </div>
     <script src="./js/angular.js"></script>

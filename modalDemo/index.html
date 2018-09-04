@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="./css/bootstrap.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/my.css">
+    <title></title>
+</head>
+
+<body>
+    <div ng-controller="ModalDemoCtrl" ng-app="ui.bootstrap.demo">
+        <button value="点击我弹出小模态框" ng-click="openWindow('sm')">点击我弹出小模态框</button>
+        <button value="点击我弹出大模态框" ng-click="openWindow('lg')">点击我弹出大模态框</button>
+        <br>模态框传过来的value值: <span>{{value}}</span>
+        <br>模态框传过来的name值: <span>{{name}}</span>
+        <br>模态框传过来的age值: <span>{{age}}</span>
+        <br>传到模态框的id值:<input type="text" ng-model="data.id">
+    </div>
+
+    <script src="./js/angular.js"></script>
+    <script src="./js/ui-bootstrap-tpls.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/modal.js"></script>
+</body>
+
+</html>
