@@ -113,5 +113,28 @@ i:hover {
 }
 
 .tree-control .tree-selected{
-   color: red;
+   font-weight: bold;
+}
+.inject-isSelected{
+    background-color: #eeeeee;
+}
+
+.inject-iLeaf{
+    background-color: lightgoldenrodyellow;
+}
+.tree-option{
+    float: left;
+    margin-left: 50px;
+}
+
+.tree-option button{
+    margin: 5px;
+    width: 250px;
+}
+
+#menu{
+    background-color:lightslategray;
+    width: 100px;
+    height: 25px;
+    z-index: 1;
 }

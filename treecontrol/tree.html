@@ -13,23 +13,38 @@
 <body ng-app="MyApp" ng-controller="myCtrl">
     <div class="tree-style">
         <!-- 
-            class="":样式表，官方提供了三种：tree-classic  tree-dark tree-light
+            class="":样式表，官方提供了三种：tree-classic  tree-dark    tree-light
             tree-model：树数据的对象，格式: [Node|Array[Node]]，对象范围在'$scope'的范围内
             options：树的配置
             on-selection:选择node触发事件，例‘on-selection="showSelected(node)，将选中node的信息作为参数传入函数"
-            selected-node：[Node]，当multiSelection=false，绑定tree中单选node。
-            selected-nodes：[Array[Node]]，当multiSelection=true，绑定tree中多选nodes。
+            selected-node：[Node]，当multiSelection=false，绑定tree中单选node
+            selected-nodes：[Array[Node]]，当multiSelection=true，绑定tree中多选nodes
         -->
         <treecontrol class="tree-control" tree-model="data.dataForTheTree" 
-        options="treeOptions" on-selection="showSelected(node)">
+        options="treeOptions" on-selection="printSelected(node)" selected-nodes="selected" expanded-nodes="expanded" 
+        on-node-toggle="printToggle(node)" order-by="orderby" reverse-order="{{reverse}}"
+        filter-expression="predicate" filter-comparator="comparator" 
+        on-right-click="rgtClick(node)" menu-id="menu">
             {{node.name}}
         </treecontrol>
+
+        <ul id="menu" >
+            <li>{{clickNode}}</li>
+        </ul>
     </div>
-    <script type=" text/javascript " src="./js/jquery.min.js "></script>
-    <script type="text/javascript " src="./js/angular.js "></script>
-    <script type="text/javascript " src="./js/angular-tree-control.js "></script>
-    <script type="text/javascript " src="./js/context-menu.js "></script>
-    <script src="./app.js "></script>
+    <div class="tree-option">
+        <button ng-click="addNewRoot()">添加Class 8子节点</button><br>
+        <button ng-click="addNewLeaf()">在Class 3添加Group 25叶子节点</button><br>
+        <button ng-click="clearSelected()">清除所有被选中的状态</button><br>
+        <button ng-click="sort()">排序</button><input type="checkbox" ng-model="reverse">倒排<br>
+        请输入过滤表达式:<input type="text" ng-model="predicate" placeholder="Class 3">
+        <input type="checkbox" ng-model="comparator">精确匹配
+    </div>
+    <script type="text/javascript" src="./js/jquery.min.js "></script>
+    <script type="text/javascript" src="./js/angular.js "></script>
+    <script type="text/javascript" src="./js/angular-tree-control.js "></script>
+    <script type="text/javascript" src="./js/context-menu.js "></script>
+    <script src="./tree.js"></script>
 </body>
 
 </html>
