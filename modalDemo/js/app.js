@@ -7,7 +7,7 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'app']).controller('ModalDe
     }
     $scope.openWindow = function(size) {
         var modalInstance = $uibModal.open({
-            templateUrl: '../modal.html',
+            templateUrl: './modal.html',
             controller: 'ModalInstanceCtrl',
             backdrop: "static",
             size: size,

@@ -1,24 +1,13 @@
 
 "use strict";
-var app = angular.module("myApp", [])
-app.controller('myCtrl',function($scope){
-    $scope.status = true;
-    $scope.click = function(){      
-        if($scope.status == true)
-            $scope.status = false;
-        else{
-            $scope.status = true;
-        }
-    }
-});
-app.directive("trsRadio", function() {
+angular.module("trsRadio", []).directive("trsRadio", function() {
     return {
         // restrict:限定其使用方式，详细用法：
         // E(元素)：<trs-radio></trs-radio> 
         // A(属性)：<div trs-radio='xxx'></div>
         // C(类)： <div class="trsRadio"></div>  
         // M(注释)：<--directive:trsRadio expression-->  与ng版本有关
-        restrict: "EACM",
+        //restrict: "EACM",
 
         //replace：是否使用隐藏自定义的标签
         replace: false,
@@ -31,7 +20,7 @@ app.directive("trsRadio", function() {
 
         //template:自定义指令中的内容，可以是一段html代码，也可以是一个函数,接受两个参数tElement和tAttrs
         //template: '<input type="button" value="确认" ng-click="confirm()"/>' ,
-        templateUrl: "./radio/radio.html",
+        templateUrl: "./trsRadio/trsRadio.html",    //以项目为根目录的相对路径
 
         //scope：作用域继承机制,取值：
         //false：默认值，表示继承父作用域，父子作用域相互影响
