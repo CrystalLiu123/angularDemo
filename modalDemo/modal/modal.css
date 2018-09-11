@@ -12,10 +12,10 @@
 }
 
 
-/* .modal {
-    position: flex;
-    top: 50%;
-    left: 50%;
-    width: 500px;
-    height: 300px;
-} */
+body>ul>li{
+    list-style: none;
+}
+
+body>ul>li>button{
+    margin: 5px 0px;
+}

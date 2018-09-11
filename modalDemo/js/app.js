@@ -1,5 +1,4 @@
 angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'app']).controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
-    $scope.id = '';
     $scope.grades = [89, 90, 88, 87, 86];
     $scope.data = {
         id: $scope.id,
@@ -7,7 +6,7 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'app']).controller('ModalDe
     }
     $scope.openWindow = function(size) {
         var modalInstance = $uibModal.open({
-            templateUrl: './modal.html',
+            templateUrl: './modal/modal.html',
             controller: 'ModalInstanceCtrl',
             backdrop: "static",
             size: size,

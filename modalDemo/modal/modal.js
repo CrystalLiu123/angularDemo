@@ -1,5 +1,4 @@
-//$uibModalInstance是模态窗口的实例  
-angular.module('app', []).controller('ModalInstanceCtrl', function($scope, $uibModalInstance, params) {
+ angular.module('app', []).controller('ModalInstanceCtrl', function($scope, $uibModalInstance, params) {
     $scope.id = params.id;
     $scope.grades = params.grades;
 
