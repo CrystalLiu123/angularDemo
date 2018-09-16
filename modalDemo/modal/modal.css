@@ -1,0 +1,32 @@
+.modal-header button {
+    float: right;
+    width: 15px;
+    height: 15px;
+    background: url("../images/icon-remove.png");
+    background-repeat: no-repeat;
+    opacity: 0.8;
+}
+
+.modal-header button:hover {
+    opacity: 1;
+}
+
+
+body>ul>li{
+    list-style: none;
+}
+
+body>ul>li>button{
+    margin: 5px 0px;
+}
+
+.backdrop{
+    background-color: aquamarine;
+}
+
+.bodyclass{
+    font-weight: bold;
+}
+.windowclass{
+    border: 3px solid salmon;
+}
