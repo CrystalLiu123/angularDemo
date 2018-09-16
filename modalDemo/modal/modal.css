@@ -19,3 +19,14 @@ body>ul>li{
 body>ul>li>button{
     margin: 5px 0px;
 }
+
+.backdrop{
+    background-color: aquamarine;
+}
+
+.bodyclass{
+    font-weight: bold;
+}
+.windowclass{
+    border: 3px solid salmon;
+}

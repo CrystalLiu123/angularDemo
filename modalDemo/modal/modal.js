@@ -1,6 +1,6 @@
- angular.module('app', []).controller('ModalInstanceCtrl', function($scope, $uibModalInstance, params) {
+ angular.module('modalCtrl', []).controller('ModalInstanceCtrl', ['$scope', '$uibModalInstance', 'params', 'params2',function($scope, $uibModalInstance,params,params2) {
     $scope.id = params.id;
-    $scope.grades = params.grades;
+    $scope.grades = params2.grades;
 
     $scope.name = 'mao';
     $scope.age = '1';
@@ -18,4 +18,4 @@
     $scope.close = function() {
         $uibModalInstance.dismiss('closed');
     }
-});
+}]);

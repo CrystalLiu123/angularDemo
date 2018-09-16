@@ -30,7 +30,7 @@ app.config(["$stateProvider","$urlRouterProvider",function($stateProvider,$urlRo
                 template:"<h3>这是view-bottom视图<h3>"
             }
         }
-    })
+    });
     $urlRouterProvider.otherwise("/");
 }]);
 app.controller("ctrl1", ["$scope", "$http", function($scope, $http) {

@@ -1,4 +1,4 @@
-angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'app']).controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
+angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'modalCtrl']).controller('ModalDemoCtrl', function($scope, $uibModal, $log) {
     $scope.grades = [89, 90, 88, 87, 86];
     $scope.data = {
         id: $scope.id,
@@ -8,10 +8,17 @@ angular.module('ui.bootstrap.demo', ['ui.bootstrap', 'app']).controller('ModalDe
         var modalInstance = $uibModal.open({
             templateUrl: './modal/modal.html',
             controller: 'ModalInstanceCtrl',
-            backdrop: "static",
-            size: size,
+            backdrop: true,
+            backdropClass:'backdrop',
+            openedClass: 'bodyclass',
+            //windowClass: 'windclass',
+            size:size,
+            animation: true,
             resolve: {
                 params: function() {
+                    return $scope.data;
+                },
+                params2: function(){
                     return $scope.data;
                 }
             }
